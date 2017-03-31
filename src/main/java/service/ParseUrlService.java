@@ -16,7 +16,9 @@ public class ParseUrlService
     private boolean flag = true;//执行标识
 
     private static ParseUrlService instance = null;
-    private String startUrl = "http://image.baidu.com/";
+    //private String startUrl = "https://list.tmall.com/search_product.htm?q=%E7%94%B5%E8%A7%86%E6%9C%BA";
+    private String startUrl = "http://www.ifeng.com/";
+
     public LinkedList<String> pageUrls = new LinkedList();//链表
 
     public static ParseUrlService getInstance() {//单例，实现线程共享数据
@@ -27,6 +29,7 @@ public class ParseUrlService
     }
 
     public void run() {
+
         System.out.print("flag:" + flag);
 
         this.pageUrls.add(this.startUrl);
